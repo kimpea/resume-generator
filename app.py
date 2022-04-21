@@ -60,6 +60,32 @@ def register():
         return render_template('register.html', message='Enter a username and password')
     return render_template('register.html', message='')
 
+
+@app.route('/<username>/add_resume', methods=['GET', 'POST'])
+def add_resume(username):
+    if 'username' in session:
+        username = session['username']
+        if request.method == 'POST':
+            resume = db['resumes']
+            resume.insert_one({
+                # Contact Details
+                'first_name': request.form['first_name'],
+                'last_name': request.form['last_name'],
+                'address': session['address'],
+                'mobile_number': session['mobile_number'],
+                'email_address': session['email_address'],
+                # Work History
+                'company_name': session['company_name'],
+                'position': session['position'],
+                'start_date': session['start_date'],
+                'end_date': session['end_date'],
+                'main_duties': session['main_duties'],
+                
+            })
+        return render_template('addresume.html',
+                                username=session['username'])
+    return render_template('login.html')
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
     port=int(os.environ.get('PORT', 5000)),
