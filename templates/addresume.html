@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section id="resume-form">
+    <form action="{{ url_for('add_resume', username=session['username']) }}" method="POST" id="resume-form">
+
+        <h3>Contact Details</h3>
+        <label for="first_name">First Name</label>
+        <input id="first_name" type="text" name="first_name" required>
+
+        <label for="last_name">Last Name</label>
+        <input id="last_name" type="text" name="last_name" required>
+
+        <label for="address">Address</label>
+        <input id="address" type="text" name="address" required>
+        
+        <label for="mobile_number">Mobile Number</label>
+        <input id="mobile_number" 
+                type="tel" 
+                name="mobile_number" 
+                pattern="[0-9]{5} [0-9]{5}" 
+                placeholder="Format: 079077 00044" required>
+        
+        <label for="email_address">Email Address</label>
+        <input id="email_address" type="email" name="email_address" required>
+
+        <h3>Work History</h3>
+        <label for="company_name">Company Name</label>
+        <input id="company_name" type="text" name="company_name" required>
+        
+        <label for="position">Position</label>
+        <input id="position" type="text" name="position" required>
+
+        <label for="start_date">Start Date</label>
+        <input id="start_date" type="date" name="start_date" required>
+
+        <label for="end_date">End Date</label>
+        <input id="end_date" type="date" name="end_date">
+
+        <label for="main_duties">Main Duties:</label>
+        <textarea id="main_duties" type="text" name="main_duties" required></textarea>
+
+        <button type="submit" name="action">Submit Article</button>
+
+    </form>
+</section>
+
+{% endblock %}
