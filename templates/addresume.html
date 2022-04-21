@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<section id="resume-form">
+<section id="add-resume-section">
     <form action="{{ url_for('add_resume', username=session['username']) }}" method="POST" id="resume-form">
 
         <h3>Contact Details</h3>
@@ -41,14 +41,16 @@
         <textarea id="main_duties" type="text" name="main_duties" required></textarea>
         <script>
             ClassicEditor
-                .create( document.querySelector( '#main_duties' ),
+                .create( document.querySelector('#main_duties'),
                 {
                     toolbar: [ 'bold', 'italic','numberedList', 'bulletedList' ]
-                } )
+                })
                 .catch( error => {
                     console.error( error );
-                } );
+                });
         </script>
+
+
 
         <button type="submit" name="action">Submit Article</button>
 
