@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3>Register</h3>
+<h5>{{message|safe}}</h5>
+
+<form action="{{ url_for('register') }}" method="POST">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit" name="action">Register</button>
+</form>
+
+{% endblock %}
