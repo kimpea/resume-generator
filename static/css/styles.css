@@ -4,10 +4,40 @@ body {
 }
 
 header {
-    background-color: #3A0CA3;
+    background-color: #560BAD;
     color: white;
 }
 
 #logo {
     margin: 0;
+    width: 30%;
+}
+
+#logo a {
+    text-decoration: none;
+    color: white;
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+}
+
+.nav-list-item a {
+    text-decoration: none;
+    color: white;
 }
