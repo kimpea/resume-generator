@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
 body {
-    background-color: white;
+    background-color: #3F37C9;
     margin: 0;
+    font-family: 'DM Sans', sans-serif;
 }
 
 header {
@@ -40,4 +43,47 @@ header {
 .nav-list-item a {
     text-decoration: none;
     color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#add-resume-section {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+}
+
+#resume-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #4361EE;
+    color: white;
+}
+
+#resume-form label {
+    width: 60%;
+    padding: 6px 0px;
+    margin: 4px 0;
+}
+
+#resume-form input {
+    width: 60%;
+    padding: 6px 10px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+
+
+#resume-form .ck-editor {
+    width: 60%;
 }
