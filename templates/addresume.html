@@ -39,6 +39,16 @@
 
         <label for="main_duties">Main Duties:</label>
         <textarea id="main_duties" type="text" name="main_duties" required></textarea>
+        <script>
+            ClassicEditor
+                .create( document.querySelector( '#main_duties' ),
+                {
+                    toolbar: [ 'bold', 'italic','numberedList', 'bulletedList' ]
+                } )
+                .catch( error => {
+                    console.error( error );
+                } );
+        </script>
 
         <button type="submit" name="action">Submit Article</button>
 
