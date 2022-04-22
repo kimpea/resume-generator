@@ -20,9 +20,9 @@
                 <li class="nav-list-item"><a href="{{ url_for ('add_resume', username=session['username']) }}">Create a Resume</a></li>
                 <li class="nav-list-item"><a href="{{ url_for ('logout') }}">Log Out</a></li>
                 {% else %}
-                
+
                 {% endif %}
-                <li class="nav-list-item"><a href="#" class="nav-item-link">Blog</a></li>
+                <li class="nav-list-item"><a href="{{ url_for ('all_articles') }}" class="nav-item-link">Articles</a></li>
             </ul>
         </nav>
     </header>
