@@ -9,12 +9,18 @@ app.secret_key = 'some secret'
 cluster = MongoClient('mongodb+srv://admin:N4yqaCy7BTzZe8sw@resumegeneratorcluster.0spsy.mongodb.net/resume-generator')
 db = cluster['resume-generator']
 users = db['users']
+articles = db['articles']
 
 @app.route('/')
 
 @app.route('/index')
 def index():
     return render_template('index.html')
+
+@app.route('/all_articles')
+def all_articles():
+    return render_template("allarticles.html",
+                            articles=db['articles'])
 
 @app.route('/index', methods=['GET', 'POST'])
 def login():
