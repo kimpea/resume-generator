@@ -2,6 +2,53 @@
 
 {% block content %}
 
+<section id="article-section">
 
+    <h1>Articles</h1>
+
+    <h3 class="article-heading">Article Heading</h3>
+    <span class="article-author">by Testing</span>
+    <p class="article-body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Recusandae cupiditate animi minus consequatur incidunt. 
+        Ea ullam saepe sint sapiente assumenda, optio aliquam 
+        porro voluptates incidunt at iusto quod aspernatur totam.
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Recusandae cupiditate animi minus consequatur incidunt. 
+        Ea ullam saepe sint sapiente assumenda, optio aliquam 
+        porro voluptates incidunt at iusto quod aspernatur totam.
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Recusandae cupiditate animi minus consequatur incidunt. 
+        Ea ullam saepe sint sapiente assumenda, optio aliquam 
+        porro voluptates incidunt at iusto quod aspernatur totam.
+    </p>
+</section>
+
+<section id="account-section">
+    {% if 'username' in session %}
+    <h2>User Profile</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Recusandae cupiditate animi minus consequatur incidunt. 
+        Ea ullam saepe sint sapiente assumenda, optio aliquam 
+        porro voluptates incidunt at iusto quod aspernatur totam.
+    </p>
+    {% else %}
+    <h2>Login</h2>
+    <form action="{{ url_for('login') }}" method="POST" id="login-form">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit" name="action" id="login-button">Log In</button>
+        <a href="{{ url_for('register') }}">Register Here</a>
+    </form>
+    {% endif %}
+    {{message|safe}}
+</section>
 
 {% endblock %}
