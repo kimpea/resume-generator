@@ -52,6 +52,20 @@ main {
     align-items: center;
 }
 
+#login-form-container {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
 #add-resume-section {
     display: flex;
     flex-direction: row;
