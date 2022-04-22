@@ -2,37 +2,40 @@
 
 {% block content %}
 
-<section id="article-section">
+<section class="articles-section">
 
     <h1>Articles</h1>
 
-    <h3 class="article-heading">Article Heading</h3>
-    <span class="article-author">by Testing</span>
-    <p class="article-body">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Recusandae cupiditate animi minus consequatur incidunt. 
-        Ea ullam saepe sint sapiente assumenda, optio aliquam 
-        porro voluptates incidunt at iusto quod aspernatur totam.
+    <div class="article-container">
+        <h3 class="article-heading">Article Heading</h3>
+        <span class="article-author">by Testing</span>
+        <p class="article-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Recusandae cupiditate animi minus consequatur incidunt.
+            Ea ullam saepe sint sapiente assumenda, optio aliquam
+            porro voluptates incidunt at iusto quod aspernatur totam.
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Recusandae cupiditate animi minus consequatur incidunt. 
-        Ea ullam saepe sint sapiente assumenda, optio aliquam 
-        porro voluptates incidunt at iusto quod aspernatur totam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Recusandae cupiditate animi minus consequatur incidunt.
+            Ea ullam saepe sint sapiente assumenda, optio aliquam
+            porro voluptates incidunt at iusto quod aspernatur totam.
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Recusandae cupiditate animi minus consequatur incidunt. 
-        Ea ullam saepe sint sapiente assumenda, optio aliquam 
-        porro voluptates incidunt at iusto quod aspernatur totam.
-    </p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Recusandae cupiditate animi minus consequatur incidunt.
+            Ea ullam saepe sint sapiente assumenda, optio aliquam
+            porro voluptates incidunt at iusto quod aspernatur totam.
+        </p>
+    </div>
+
 </section>
 
 <section id="account-section">
     {% if 'username' in session %}
     <h2>User Profile</h2>
     <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Recusandae cupiditate animi minus consequatur incidunt. 
-        Ea ullam saepe sint sapiente assumenda, optio aliquam 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Recusandae cupiditate animi minus consequatur incidunt.
+        Ea ullam saepe sint sapiente assumenda, optio aliquam
         porro voluptates incidunt at iusto quod aspernatur totam.
     </p>
     {% else %}
