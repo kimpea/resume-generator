@@ -2,15 +2,17 @@
 
 {% block content %}
 
-<form action="{{ url_for('login') }}" method="POST">
-    <label for="username">Username</label>
-    <input type="text" id="username" name="username" required>
+<div id="login-form-container">
+    <form action="{{ url_for('login') }}" method="POST" id="login-form">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
 
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
 
-    <button type="submit" name="action">Log In</button>
-    <a href="{{ url_for('register') }}">Register Here</a>
-</form>
+        <button type="submit" name="action">Log In</button>
+        <a href="{{ url_for('register') }}">Register Here</a>
+    </form>
+</div>
 
 {% endblock %}
