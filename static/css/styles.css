@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
 body {
-    background-color: #3F37C9;
+    background-color: #708d81;
     margin: 0;
     font-family: 'DM Sans', sans-serif;
 }
 
 header {
-    background-color: #560BAD;
+    background-color: #001427;
     color: white;
 }
 
@@ -47,18 +47,34 @@ header {
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
 }
 
-#login-form-container {
-    background-color: white;
+#account-section {
+    background-color: #f4d58d;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     padding: 1rem;
     margin: 1rem;
+    width: 20%;
+}
+
+#article-section {
+    background-color: #f4d58d;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    margin: 1rem;
+}
+
+.article-heading {
+    margin: 0;
+}
+
+.article-author {
+    opacity: 0.5;
 }
 
 #login-form {
@@ -78,8 +94,8 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #4361EE;
-    color: white;
+    background-color: #f4d58d;
+    color: black;
 }
 
 #resume-form label {
@@ -100,4 +116,24 @@ main {
 
 #resume-form .ck-editor {
     width: 60%;
+}
+
+#login-form input {
+    padding: 6px 10px;
+    margin: 4px 0;
+    box-sizing: none;
+    border: none;
+    border-bottom: 0.2rem solid black;
+}
+
+#login-button {
+    background-color: #001427;
+    color: white;
+    border-radius: none;
+    padding: 0.5rem;
+    width: 20%;
+    text-align: center;
+    border: none;
+    margin: 0.2rem 0rem;
+    cursor: pointer;
 }
