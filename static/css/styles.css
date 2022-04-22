@@ -60,7 +60,7 @@ main {
     width: 20%;
 }
 
-#article-section {
+.articles-section {
     background-color: #f4d58d;
     width: 50%;
     display: flex;
@@ -76,6 +76,7 @@ main {
 .article-author {
     opacity: 0.5;
 }
+
 
 #login-form {
     display: flex;
