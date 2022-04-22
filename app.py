@@ -16,7 +16,7 @@ users = db['users']
 def index():
     return render_template('index.html')
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/index', methods=['GET', 'POST'])
 def login():
     if 'username' in session:
         return render_template('index.html',
@@ -28,17 +28,17 @@ def login():
             if request.form['password'] == user_login['password']:
                 session['username'] = request.form['username']
                 return redirect(url_for('index'))
-        return render_template('login.html',
+        return render_template('index.html',
                                     message='Invalid username or password')
-    return render_template('login.html', message='')
+    return render_template('index.html', message='')
 
-@app.route('/logout')
+@app.route('/index/logout')
 def logout():
     if 'username' in session:
         session.pop('username')
-        return render_template('message.html',
+        return render_template('index.html',
                                 message='Logged out. See you later!')
-    return render_template('message.html',
+    return render_template('index.html',
                             message='You have already logged out!')
 
 @app.route('/register', methods=['GET', 'POST'])
